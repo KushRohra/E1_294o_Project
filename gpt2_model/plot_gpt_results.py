@@ -1,15 +1,11 @@
 from gpt2_baseline import gpt2_baseline
 from gpt2_improved_edp import gpt2_improved_edp
 from util import make_plot
+from datasets import load_dataset
 
 def plot_gpt_2_results():
-    test_dataset = [
-        "Hello, my name is ChatGPT. How can I assist you today?",
-        "What is the capital of France?",
-        "Explain the theory of relativity.",
-        "How do I bake a chocolate cake?",
-        "What are the benefits of machine learning?"
-    ]
+    dataset = load_dataset('ag_news', split='test[:20]') 
+    test_dataset = [item['text'] for item in dataset]
 
     average_baseline_duration, average_layer_durations, average_edp_values = gpt2_baseline(test_dataset)
     average_layer_durations_improved, average_edp_values_improved = gpt2_improved_edp(test_dataset)
