@@ -14,7 +14,8 @@ def plot_bert_results():
     #     "What are the benefits of machine learning?"
     # ]
 
-    test_dataset = load_dataset('ag_news')
+    dataset = load_dataset('ag_news', split='test[:20]')
+    test_dataset = [item['text'] for item in dataset]
 
     average_baseline_duration, average_layer_durations, average_edp_values = bert_baseline(test_dataset)
     average_layer_durations_improved, average_edp_values_improved = bert_improved_edp(test_dataset)
