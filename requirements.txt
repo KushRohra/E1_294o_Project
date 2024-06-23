@@ -1,0 +1,7 @@
+tensorflow
+numpy
+matplotlib
+transformers
+tf_keras
+sentencepiece
+torch
