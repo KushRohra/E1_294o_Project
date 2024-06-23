@@ -5,3 +5,4 @@ transformers
 tf_keras
 sentencepiece
 torch
+datasets
