@@ -3,7 +3,7 @@ import time
 import matplotlib.pyplot as plt
 import os
 
-path = os.path.join(os.getcwd(), "RoBERTa_model")
+path = os.getcwd()
 
 def make_plot(epochs, plot_1_values, label_1, plot_2_values, label_2, title, x_label, y_label):
     plt.figure(figsize=(10, 6)) 
