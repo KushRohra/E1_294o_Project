@@ -4,7 +4,7 @@ import os
 from transformers import TFElectraForSequenceClassification, ElectraTokenizer
 import matplotlib.pyplot as plt
 
-path = os.path.join(os.getcwd(), "electra_model")
+path = os.getcwd()
 
 
 def get_model_and_tokenizer():

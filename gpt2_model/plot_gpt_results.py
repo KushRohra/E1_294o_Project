@@ -31,7 +31,6 @@ def plot_gpt_2_results(average_layer_durations, average_edp_values, average_laye
     )
 
 if __name__ == "__main__":
-    print(f"Start time: {datetime.now()}")
     dataset = load_dataset('ag_news', split='test[:500]') 
     test_dataset = [item['text'] for item in dataset]
 
@@ -48,7 +47,6 @@ if __name__ == "__main__":
     print(f"layer_duration_percentange_improvements: {layer_duration_percentange_improvements}")
 
     plot_gpt_2_results(average_layer_durations, average_edp_values, average_layer_durations_improved, average_edp_values_improved)
-    print(f"End time: {datetime.now()}")
 
 '''
 average_layer_durations: [0.02575966 0.02479245 0.02470555 0.0244479  0.02464197 0.02459989 0.02453771 0.02475476 0.02447546 0.02918374 0.02444964 0.02432861]
